@@ -2,6 +2,7 @@
 
 // Step 1: Window in the DOM
 let storeLocationSection = document.getElementById('shop location');
+let table = document.getElementById('shop location');
 console.log(storeLocationSection);
 
 console.log(storeLocationSection);
