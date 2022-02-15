@@ -20,6 +20,7 @@ let seattle = {
   avgCookiePerCust: 6.3,
   custPerHr: [],
   cookiesSoldPerHr: [],
+  totalCookies: 0,
   populateData: function() {
     for(let i = 0; i < storeHours.length; i++)
     {
@@ -57,6 +58,7 @@ let tokyo = {
   avgCookiePerCust: 1.2,
   custPerHr: [],
   cookiesSoldPerHr: [],
+  totalCookies: 0,
   populateData: function(){
     for(let i = 0; i < storeHours.length;i++)
   {
@@ -94,6 +96,7 @@ let dubai = {
   avgCookiePerCust: 3.7,
   custPerHr: [],
   cookiesSoldPerHr: [],
+  totalCookies: 0,
   populateData: function(){
     for(let i = 0; i < storeHours.length; i++)
     {
@@ -131,6 +134,7 @@ let paris = {
   avgCookiePerCust: 4.3,
   custPerHr: [],
   cookiesSoldPerHr: [],
+  totalCookies: 0,
   populateData: function() {
     for(let i = 0; i < storeHours.length; i++)
     {
@@ -168,6 +172,7 @@ let lima = {
   avgCookiePerCust: 4.6,
   custPerHr: [],
   cookiesSoldPerHr: [],
+  totalCookies: 0,
   populateData: function(){
     for(let i = 0; i < storeHours.length; i++)
     {
