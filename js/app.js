@@ -7,6 +7,8 @@ console.log(storeLocationSection);
 console.log(storeLocationSection);
 console.dir(storeLocationSection);
 
+let storeHours = ['8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm']
+
 let seattle = {
   cityName: 'Seattle',
   minCustomer: 23,
@@ -15,7 +17,7 @@ let seattle = {
   custPerHr: [],
   cookiesSoldPerHr: [],
   custPerHr: function() {
-    this.custPerHr = `${custPerHr}`;
+    this.custPerHr = `${custPerHr} customers per hour`;
   }
 }
   function randomCustPerHr(min,max) {
@@ -33,45 +35,54 @@ seattle.render = function() {
 }
 
 // let tokyo = {
-//   cityName = `Tokyo`,
+//   cityName = 'Tokyo',
 //   minCustomer: 3,
 //   maxCustomer: 24,
 //   avgCookiePerCust: 1.2,
-//   randomCustHr: function(){
-//     this.randomCustHr = `${randomCustHr}`;
-//   // function randomCustHr(min,max) {
+//   custPerHr: [],
+//   cookiesSoldPerHr: [],
+//   custPerHr: function(){
+//     this.custPerHr = `${custPerHr} customers per hour`;
+//   // function custPerHr(min,max) {
 //     // return Math.floor(Math.random() * (max - min + 1) + min);
 //   }
 // };
 
 // let dubai = {
-//   cityName = `dubai`,
+//   cityName = 'dubai',
 //   minCustomer: 11,
 //   maxCustomer: 38,
 //   avgCookiePerCust: 3.7,
-//   randomCustHr: function(){
-//     this.randomCustHr = `${randomCustHr}`;
-//   // function randomCustHr(min,max) {
+//   custPerHr: [],
+//   cookiesSoldPerHr: [],
+//   custPerHr: function(){
+//     this.custPerHr = `${custPerHr}`;
+//   // function custPerHr(min,max) {
 //     // return Math.floor(Math.random() * (max - min + 1) + min);
 //   }
 // };
 
 // let paris = {
-//   cityName = `Paris`,
+//   cityName = 'Paris',
 //   minCustomer: 20,
 //   maxCustomer: 38,
 //   avgCookiePerCust: 4.3,
-//   // function randomCustHr(min,max) {
+//   custPerHr: [],
+//   cookiesSoldPerHr: [],
+//   custPerHr: function(){
+ // function custPerHr(min,max) {
 //     return Math.floor(Math.random() * (max - min + 1) + min);
 //   }
 // };
 
 // let lima = {
-//   cityName = `Lima`,
+//   cityName = 'Lima',
 //   minCustomer: 2,
 //   maxCustomer: 16,
 //   avgCookiePerCust: 4.6,
-//   // function randomCustHr(min,max) {
+//   cookiesSoldPerHr: [],
+//   custPerHr: function(){
+//   // function custPerHr(min,max) {
 //     return Math.floor(Math.random() * (max - min + 1) + min);
 //   }
 // };
