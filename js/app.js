@@ -4,17 +4,28 @@
 let storeLocationSection = document.getElementById('shop location');
 console.log(storeLocationSection);
 
+console.log(storeLocationSection);
+console.dir(storeLocationSection);
+
 let seattle = {
-  cityName = `Seattle`,
+  cityName: `Seattle`,
   minCustomer: 23,
   maxCustomer: 65,
   avgCookiePerCust: 6.3,
-  randomCustHr: function(){
-    this.randomCustHr = `${randomCustHr}`;
-  // function randomCustHr(min,max) {
-    // return Math.floor(Math.random() * (max - min + 1) + min);
+  custPerHr: [],
+  cookiesSoldPerHr: [],
+  custPerHr: function() {
+       this.custPerHr = `${custPerHr}`;
   }
-};
+  function randomCustPerHr(min,max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+ }
+}
+
+seattle.render = function() {
+  // Step 2 - create the element
+  let h2Elem = document.createElement(`h2`);
+}
 
 // let tokyo = {
 //   cityName = `Tokyo`,
