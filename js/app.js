@@ -8,23 +8,28 @@ console.log(storeLocationSection);
 console.dir(storeLocationSection);
 
 let seattle = {
-  cityName: `Seattle`,
+  cityName: 'Seattle',
   minCustomer: 23,
   maxCustomer: 65,
   avgCookiePerCust: 6.3,
   custPerHr: [],
   cookiesSoldPerHr: [],
   custPerHr: function() {
-       this.custPerHr = `${custPerHr}`;
+    this.custPerHr = `${custPerHr}`;
   }
+}
   function randomCustPerHr(min,max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
  }
-}
+
 
 seattle.render = function() {
   // Step 2 - create the element
-  let h2Elem = document.createElement(`h2`);
+  let h2Elem = document.createElement('h2');
+  // Step 3 - Give it context if needed (optional)
+  h2Elem.textContent = this.cityName;
+  // Step 4 - add it to the DOM -- parent.appendChild(child)
+  storeLocationSection.appendChild(h2Elem);
 }
 
 // let tokyo = {
