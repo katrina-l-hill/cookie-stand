@@ -5,7 +5,6 @@ let table = document.getElementById('sales table');
 let storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 function createTableHeader() {
-  //Add table headers
   let headerRow = document.createElement('tr');
   table.appendChild(headerRow);
   let headerBlankCell = document.createElement('th');
@@ -17,6 +16,31 @@ function createTableHeader() {
   }
 }
 createTableHeader();
+
+function createTableFooter() {
+  let footerElement = document.createElement('tfoot');
+  table.appendChild(footerElement);
+  let footerRow = document.createElement('tr');
+  table.appendChild(footerRow);
+  //loop through store hours to create cells
+    for (let i = 0; i < storeHours.length; i++) {
+    let totalCookies = 0;
+    for (let j = 0; j < cityName.length; j++) {
+      custPerHr += (cityName[j].cookiesSoldPerHr[i]);
+    }
+
+  //for each time, total the # of cookies sold
+    this.cookiesSoldPerHr.push(Math.floor(custCount * this.avgCookiePerCust));
+    total += Math.floor(custCount * this.avgCookiePerCust);
+}
+  //add the number to the cell
+    let footerCell = document.createElement('th');
+
+  //add the cell to the footer row
+    footerCell.textContent = storeHours[i];
+    footerRow.appendChild(footerCell);
+}
+createTableFooter();
 
 function randomCustPerHr(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
