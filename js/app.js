@@ -63,7 +63,10 @@ let dubai = new City('Dubai', 11, 38, 3.7);
 let paris = new City('Paris', 20, 38, 2.3);
 let lima = new City('Lima', 2, 16, 4.6);
 cities.push(seattle);
+cities.push(tokyo);
+cities.push(dubai);
 cities.push(paris);
+cities.push(lima);
 
 //Add city rows
 for (let i = 0; i < cities.length; i++) {
