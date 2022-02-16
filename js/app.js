@@ -17,30 +17,7 @@ function createTableHeader() {
 }
 createTableHeader();
 
-function createTableFooter() {
-  let footerElement = document.createElement('tfoot');
-  table.appendChild(footerElement);
-  let footerRow = document.createElement('tr');
-  table.appendChild(footerRow);
-  //loop through store hours to create cells
-    for (let i = 0; i < storeHours.length; i++) {
-    let totalCookies = 0;
-    for (let j = 0; j < cityName.length; j++) {
-      custPerHr += (cityName[j].cookiesSoldPerHr[i]);
-    }
 
-  //for each time, total the # of cookies sold
-    this.cookiesSoldPerHr.push(Math.floor(custCount * this.avgCookiePerCust));
-    total += Math.floor(custCount * this.avgCookiePerCust);
-}
-  //add the number to the cell
-    let footerCell = document.createElement('th');
-
-  //add the cell to the footer row
-    footerCell.textContent = storeHours[i];
-    footerRow.appendChild(footerCell);
-}
-createTableFooter();
 
 function randomCustPerHr(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -97,7 +74,28 @@ for (let i = 0; i < cities.length; i++) {
   cities[i].render();
 }
 
-
+function createTableFooter() {
+  let footerElement = document.createElement('tfoot');
+  table.appendChild(footerElement);
+  let footerRow = document.createElement('tr');
+  let footerTitleCell = document.createElement('td');
+  footerRow.appendChild(footerTitleCell);
+  footerTitleCell.textContent = "Totals";
+  footerElement.appendChild(footerRow);
+  //loop through store hours to create cells
+  for (let i = 0; i < storeHours.length; i++) {
+    let totalCookies = 0;
+    for (let j = 0; j < cities.length; j++) {
+      totalCookies += (cities[j].cookiesSoldPerHr[i]);
+    }
+    //create footer cell for total #
+    let footerCell = document.createElement('th');    
+    footerCell.textContent = `${totalCookies}`;
+    //append it to row
+    footerRow.appendChild(footerCell);
+  }
+}
+createTableFooter();
 
 /*
 let seattle = {
@@ -139,7 +137,7 @@ seattle.render = function() {
   totalCount.textContent = `Total: ${this.totalCookies} cookies`;
   dataList.appendChild(totalCount);
   storeLocationSection.appendChild(dataList);
-  
+
 }
 seattle.populateData();
 */
