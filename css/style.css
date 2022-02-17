@@ -11,20 +11,35 @@ h1 {
 
 h2 {
   font-size: 1.5em;
+  margin-bottom: 50px;
+  margin-left: 30px;
 }
 
 
 ul {
   list-style-type: square;
   list-style-position: inside;
+  margin-bottom: 10px;
 }
 
 .store-header{
-  font-size: 1em;
+  font-size: 0.8em;
   font-weight: bold;
   list-style-type: none;
+  margin-bottom: 10px;
 }
 
-body main p {
-  font-size: 1.3em;
+p {
+  font-size: 0.8em;
+  margin-bottom: 1em;
+  text-decoration: underline;
 }
+/* ul p {
+  font-size: 1em;
+} */
+
+li {
+  font-size: 0.7em;
+  margin-bottom: 1em;
+}
+
