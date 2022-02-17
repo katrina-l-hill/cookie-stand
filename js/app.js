@@ -2,6 +2,8 @@
 
 // Step 1: Window in the DOM
 let table = document.getElementById('sales table');
+// Creating Forms - Step 1: This grabs the element to listen to for Event Listening
+let newStoreForm = document.getElementById('newStoreForm');
 let storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 function createTableHeader() {
@@ -96,3 +98,11 @@ function createTableFooter() {
   }
 }
 createTableFooter();
+
+// Creating Form - Step 3: Write the callback or event handler
+function handleSubmit(event) {
+  event.preventDefault();
+}
+
+// Creating Forms - Step 2 (this goes at the very bottom): Add Event Listener
+newStoreForm.addEventListener('submit', handleSubmit);
