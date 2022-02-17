@@ -1,5 +1,6 @@
 * {
   background-color: lightgrey;
+  font-family: 'Arima Madurai', cursive;
 }
 
 h1 {
@@ -7,6 +8,8 @@ h1 {
   text-align: center;
   text-decoration: underline;
   margin-bottom: 50px;
+  margin-top: 30px;
+  font-family: 'Courgette', cursive;
 }
 
 h2 {
