@@ -102,6 +102,10 @@ createTableFooter();
 // Creating Form - Step 3: Write the callback or event handler
 function handleSubmit(event) {
   event.preventDefault();
+  let newStoreName = event.target.storeName.value;
+  let location = event.target.location.value;
+  // location = location.split(','); (Not needed for this lab, but this split string method will split up the character provided and return an array of elements that were split.)
+
 }
 
 // Creating Forms - Step 2 (this goes at the very bottom): Add Event Listener
