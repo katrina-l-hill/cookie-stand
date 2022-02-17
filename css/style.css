@@ -18,3 +18,13 @@ ul {
   list-style-type: square;
   list-style-position: inside;
 }
+
+.store-header{
+  font-size: 1em;
+  font-weight: bold;
+  list-style-type: none;
+}
+
+p {
+  font-size: 1.3em;
+}
