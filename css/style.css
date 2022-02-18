@@ -10,6 +10,8 @@ body {
 h1 {
   font-size: 2em;
   /* text-align: center; */
+  /* display:flex;
+  justify-content: center; */
   text-decoration: underline;
   margin-bottom: 50px;
   margin-top: 30px;
@@ -18,13 +20,11 @@ h1 {
 }
 
 h2 {
-  text-align: center;
+  /* text-align: center; */
   font-size: 1.2em;
   margin-bottom: 50px;
   margin-left: 30px;
   color:darkblue;
-  text-align:center;
-  
 }
 
 
@@ -110,21 +110,20 @@ form {
   background-color: salmon;
   box-shadow: 0 0 10px black;
   border-radius: 5px;
-  /* width:fit-content; */
 }
 
-/* fieldset {
+fieldset {
   text-decoration: underline;
-} */
+}
 
-/* legend {
+legend {
   text-decoration: underline;
-} */
+}
 
 label {
-  text-decoration: underline;
+  text-decoration: underline; */
 }
 
 /* div {
   justify-content:center;
-} */
+}
