@@ -14,14 +14,15 @@ h1 {
   margin-top: 30px;
   font-family: 'Courgette', cursive;
   color: darkslategray;
-  border-color: darkslategray;
 }
 
 h2 {
   font-size: 1.2em;
   margin-bottom: 50px;
   margin-left: 30px;
-  color:darkblue
+  color:darkblue;
+  text-align:center;
+  
 }
 
 
@@ -89,10 +90,13 @@ button {
   padding: .3em .5em;
   font-size: 01.7em;
   background-color: aliceblue;
+  box-shadow: 0 0 10px black;
+  border-radius: 5px;
 }
 
 #newStoreForm{
   margin: 1em;
+  border: 10px solid salmon;
 }
 
 input {
@@ -101,6 +105,8 @@ input {
 
 form {
   background-color: salmon;
+  box-shadow: 0 0 10px black;
+  border-radius: 5px;
 }
 
 /* fieldset {
