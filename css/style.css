@@ -33,6 +33,7 @@ ul {
   font-weight: bold;
   list-style-type: none;
   margin-bottom: 10px;
+  margin-top: 30px;
   color:brown;
 }
 
@@ -62,6 +63,7 @@ th{
 td{
   padding: 1em;
   font-size: 1.2em;
+  color:darkblue
 }
 
 .data-info{
@@ -71,4 +73,8 @@ td{
 
 .text-info{
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+  font-size: 0.7em;
 }
