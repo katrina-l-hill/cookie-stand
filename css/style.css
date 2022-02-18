@@ -84,7 +84,7 @@ td{
 }
 
 .large-link {
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 button {
@@ -97,7 +97,10 @@ button {
 }
 
 #newStoreForm{
-  margin: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
   border: 10px solid salmon;
   width:fit-content;
 }
@@ -121,9 +124,21 @@ legend {
 }
 
 label {
-  text-decoration: underline; */
+  text-decoration: underline;
 }
 
-/* div {
-  justify-content:center;
+.banner
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.banner > img{
+  height: 150px;
+}
+
+#sales-table{
+ margin-left: auto;
+ margin-right: auto;
 }
