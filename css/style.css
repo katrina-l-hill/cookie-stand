@@ -2,6 +2,10 @@
   background-color:pink;
 }
 
+body {
+  padding: 1em 2em;
+}
+
 h1 {
   font-size: 2em;
   text-align: center;
@@ -75,6 +79,16 @@ td{
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-a {
-  font-size: 0.7em;
+.large-link {
+  font-size: 1.2em;
+}
+
+button {
+  margin: .3em .5em;
+  padding: .3em .5em;
+  font-size: 01.7em;
+}
+
+#newStoreForm{
+  margin: 1em;
 }
