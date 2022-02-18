@@ -13,6 +13,7 @@ function createTableHeader() {
   headerRow.appendChild(headerBlankCell);
   for (let i = 0; i < storeHours.length; i++) {
     let headerCell = document.createElement('th');
+    headerCell.classList.add('data-info');
     headerCell.textContent = storeHours[i];
     headerRow.appendChild(headerCell);
   }
@@ -54,6 +55,7 @@ City.prototype.render = function () {
   cityRow.appendChild(cityTitleCell);
   for (let j = 0; j < storeHours.length; j++) {
     let cookieDataCell = document.createElement('td');
+    cookieDataCell.classList.add('data-info');
     cookieDataCell.textContent = this.cookiesSoldPerHr[j];
     cityRow.appendChild(cookieDataCell);
   }
@@ -92,6 +94,7 @@ function createTableFooter() {
     }
     //create footer cell for total #
     let footerCell = document.createElement('th');
+    footerCell.classList.add('data-info');
     footerCell.textContent = `${totalCookies}`;
     //append it to row
     footerRow.appendChild(footerCell);
@@ -101,36 +104,54 @@ createTableFooter();
 
 // Creating Form - Step 3: Write the callback or event handler
 function handleSubmit(event) {
-  for (let locationInput = i; i < cities; i++);
-  if (cityName === locationInput) {
-    locationInput = false;
-  } else {
-    locationInput = true;
+  event.preventDefault();
+  let newStoreLocation = event.target.locationInput.value;
+  let newStoreMin = event.target.minCustInput.value;
+  let newStoreMax = event.target.maxCustInput.value;
+  let newStoreAvg = event.target.avgCookiesPerCustInput.value;
+  //clear the table
+  table.innerHTML = "";
+
+  //find out if entered location is already in cities array
+  let exists = false;
+  let cityIndex = 0;
+  for (let i = 0; i < cities.length; i++) {
+    if (cities[i].cityName.toLowerCase() === newStoreLocation.toLowerCase())
+    {
+      exists = true;
+      cityIndex = i;
+    }
+  }
+
+  //if city is already in array, remove and re-add it with the new inputs
+  if (exists) {
+    cities[cityIndex] = new City(newStoreLocation, newStoreMin, newStoreMax, newStoreAvg);
+    createTableHeader();
+    //render data
+    for (let i = 0; i < cities.length; i++) {
+      cities[i].render();
+    }
+    //render footer
+    createTableFooter();
+  }
+  //else append the new city to the end of the list
+  else {
+    //create new city
+    let newCity = new City(newStoreLocation, newStoreMin, newStoreMax, newStoreAvg);
+    console.log(newCity);
+    //add new city to cities array
+    cities.push(newCity);
+    //rerender table
+    //render header
+    createTableHeader();
+    //render data
+    for (let i = 0; i < cities.length; i++) {
+      cities[i].render();
+    }
+    //render footer
+    createTableFooter();
   }
 }
-
-event.preventDefault();
-//clear the table
-table.innerHTML = "";
-//create new city
-let newStoreLocation = event.target.locationInput.value;
-let newStoreMin = event.target.minCustInput.value;
-let newStoreMax = event.target.maxCustInput.value;
-let newStoreAvg = event.target.avgCookiesPerCustInput.value;
-let newCity = new City(newStoreLocation, newStoreMin, newStoreMax, newStoreAvg);
-console.log(newCity);
-//add new city to cities array
-cities.push(newCity);
-//rerender table
-//render header
-createTableHeader();
-//render data
-for (let i = 0; i < cities.length; i++) {
-  cities[i].render();
-}
-//render footer
-createTableFooter();  
-
 
 // Creating Forms - Step 2 (this goes at the very bottom): Add Event Listener
 newStoreForm.addEventListener('submit', handleSubmit);
