@@ -1,6 +1,5 @@
 * {
-  background-color: lightgrey;
-  font-family: 'Arima Madurai', cursive;
+  background-color:pink;
 }
 
 h1 {
@@ -10,12 +9,14 @@ h1 {
   margin-bottom: 50px;
   margin-top: 30px;
   font-family: 'Courgette', cursive;
+  color: darkslategray;
 }
 
 h2 {
   font-size: 1.5em;
   margin-bottom: 50px;
   margin-left: 30px;
+  color: darkslategray;
 }
 
 
@@ -23,6 +24,7 @@ ul {
   list-style-type: square;
   list-style-position: inside;
   margin-bottom: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .store-header{
@@ -30,12 +32,14 @@ ul {
   font-weight: bold;
   list-style-type: none;
   margin-bottom: 10px;
+  color:brown;
 }
 
 p {
-  font-size: 0.8em;
+  font-size: 0.7em;
   margin-bottom: 1em;
   text-decoration: underline;
+  color: black;
 }
 /* ul p {
   font-size: 1em;
@@ -44,6 +48,8 @@ p {
 li {
   font-size: 0.7em;
   margin-bottom: 1em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
 }
 
 th{
