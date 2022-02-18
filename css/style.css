@@ -97,6 +97,7 @@ button {
 #newStoreForm{
   margin: 1em;
   border: 10px solid salmon;
+  width:fit-content;
 }
 
 input {
@@ -107,12 +108,21 @@ form {
   background-color: salmon;
   box-shadow: 0 0 10px black;
   border-radius: 5px;
+  /* width:fit-content; */
 }
 
 /* fieldset {
-  background-color: salmon;
+  text-decoration: underline;
 } */
 
-cities {
+/* legend {
+  text-decoration: underline;
+} */
 
+label {
+  text-decoration: underline;
+}
+
+ {
+  
 }
