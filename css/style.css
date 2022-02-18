@@ -1,49 +1,65 @@
 * {
-  background-color: lightgrey;
-  font-family: 'Arima Madurai', cursive;
+  background-color:pink;
+}
+
+body {
+  padding: 1em 2em;
+  text-align: center;
 }
 
 h1 {
   font-size: 2em;
-  text-align: center;
+  /* text-align: center; */
+  /* display:flex;
+  justify-content: center; */
   text-decoration: underline;
   margin-bottom: 50px;
   margin-top: 30px;
   font-family: 'Courgette', cursive;
+  color: darkslategray;
 }
 
 h2 {
-  font-size: 1.5em;
+  /* text-align: center; */
+  font-size: 1.2em;
   margin-bottom: 50px;
   margin-left: 30px;
+  color:darkblue;
 }
 
 
 ul {
+  font-size: 1.1em;
   list-style-type: square;
   list-style-position: inside;
   margin-bottom: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .store-header{
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: bold;
   list-style-type: none;
   margin-bottom: 10px;
+  margin-top: 30px;
+  color:brown;
 }
 
 p {
-  font-size: 0.8em;
+  font-size: 0.9em;
   margin-bottom: 1em;
   text-decoration: underline;
+  color: black;
 }
 /* ul p {
   font-size: 1em;
 } */
 
 li {
-  font-size: 0.7em;
+  font-size: 0.8em;
   margin-bottom: 1em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
 }
 
 th{
@@ -55,4 +71,74 @@ th{
 td{
   padding: 1em;
   font-size: 1.2em;
+  color:darkblue
+}
+
+.data-info{
+  font-family: Arial, Helvetica, sans-serif;
+  color:maroon;
+}
+
+.text-info{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.large-link {
+  font-size: 1.1em;
+}
+
+button {
+  margin: .3em .5em;
+  padding: .3em .5em;
+  font-size: 01.7em;
+  background-color: aliceblue;
+  box-shadow: 0 0 10px black;
+  border-radius: 5px;
+}
+
+#newStoreForm{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  border: 10px solid salmon;
+  width:fit-content;
+}
+
+input {
+  background-color: aliceblue;
+}
+
+form {
+  background-color: salmon;
+  box-shadow: 0 0 10px black;
+  border-radius: 5px;
+}
+
+fieldset {
+  text-decoration: underline;
+}
+
+legend {
+  text-decoration: underline;
+}
+
+label {
+  text-decoration: underline;
+}
+
+.banner
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.banner > img{
+  height: 150px;
+}
+
+#sales-table{
+ margin-left: auto;
+ margin-right: auto;
 }
