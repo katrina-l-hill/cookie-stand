@@ -130,7 +130,7 @@ for (let i = 0; i < cities.length; i++) {
 }
 //render footer
 createTableFooter();  
-}
+
 
 // Creating Forms - Step 2 (this goes at the very bottom): Add Event Listener
 newStoreForm.addEventListener('submit', handleSubmit);
