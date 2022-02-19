@@ -37,7 +37,7 @@ ul {
 }
 
 .store-header{
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: bold;
   list-style-type: none;
   margin-bottom: 10px;
@@ -141,4 +141,11 @@ label {
 #sales-table{
  margin-left: auto;
  margin-right: auto;
+}
+
+.footer
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
