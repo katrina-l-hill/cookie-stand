@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Order Salmon Cookies and Swag</title>
+  <title>Click here to order Salmon Cookies and Swag</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 
@@ -15,10 +15,13 @@
       <input type="text" id="firstName" name="firstname" placeholder="Your first name..">
       <label for="lastName">Last Name</label>
       <input type="text" id="lastName" name="lastname" placeholder="Your last name..">
-      <label for="country">Select your Country</label>
+      <br>
       <label for="address">Address</label>
-      <label for="paymentInfo">Payment Info</label>
-
+      <input type="text" id="address" placeholder="Type your address">
+      <br>
+      <label for="paymentInfo">Payment Information</label>
+      <input type="text" id="paymentInfo" placeholder="Type your payment information..">
+      <br>
       <label for="country">Select a Country:</label>
       <select name="blank" id="Blank for Now">
         <option value="seattle">Seattle</option>
@@ -27,38 +30,26 @@
         <option value="paris">Paris</option>
         <option value="lima">Lima</option>
       </select><br>
-      <label for="productOptions">Product Options</label>
-      <select name="notSure" id="">Not sure what goes here
-        <option value="plainCookie">Plain Cookie</option>
-        <option value="frostedCookie">Frosted Cookie</option>
-        <option value="cookieCutter">Fish Cookie Cutter</option>
-        <p>T-shirt Order:</p>
-        <label for="smallShirt">Small</label>
-      </select>
-      <select>
-        <option value="smOne">1</option>
-        <option value="smTwo">2</option>
-        <option value="smThree">3</option>
-        <label for="medShirt">Medium</label>
-      </select>
-      <select>
-        <option value="medOne">1</option>
-        <option value="medTwo">2</option>
-        <option value="medThree">3</option>
-        <label for="lgShirt">Larg</label>
-      </select>
-      <select>
-        <option value="lgOne">1</option>
-        <option value="lgTwo">2</option>
-        <option value="lgThree">3</option>
-
-        <!-- <option value="medShirt">Medium</option>
-        <option value="lgShirt">Large</option>
-        <option value="xlShirt">XL</option> -->
-
-      </select>
-
-      option>
+      <!-- <label for="productOptions">Product Options:</label> -->
+      <br>
+      <label for="cookieOptions">Select your type of cookies:</label>
+      <select name="cookies" id="Select the type of cookies">
+        <option value="plainCookie">Plain</option>
+        <option value="frostedCookie">Frosted</option>
+      </select><br>
+      <label for="selectTshirt">Select your size t-shirt:</label>
+      <select name="t-shirtOrder" id="Small">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+      </select><br>
+      <label for="t-shirtQty">Select your t-shirt quantity:</label>
+      <select name="t-shirtQty" id="T-shirt Quantity">
+          <option value="one">1</option>
+          <option value="two">2</option>
+          <option value="three">3</option>
+      </select><br>
+      <button type="submit">Submit</button>
 
     </form>
 
