@@ -18,10 +18,6 @@ function createTableHeader(tableName) {
     headerRow.appendChild(headerCell);
   }
 }
-createTableHeader('sales-table');
-createTableHeader('staffing-table');
-
-
 
 function randomCustPerHr(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
@@ -63,7 +59,7 @@ City.prototype.render = function () {
   }
 }
 
-City.prototype.staffingRender = function(){
+City.prototype.staffingRender = function () {
   let cityRow = document.createElement('tr');
   let table = document.getElementById('staffing-table');
   table.appendChild(cityRow);
@@ -73,7 +69,16 @@ City.prototype.staffingRender = function(){
   for (let j = 0; j < storeHours.length; j++) {
     let cookieDataCell = document.createElement('td');
     cookieDataCell.classList.add('data-info');
-    cookieDataCell.textContent = this.cookiesSoldPerHr[j];
+    let staffing = this.cookiesSoldPerHr[j] / 20;
+    if(staffing > 2)
+    {
+      staffing = Math.floor(staffing);
+    }
+    else
+    {
+      staffing = 2;
+    }
+    cookieDataCell.textContent = staffing;
     cityRow.appendChild(cookieDataCell);
   }
 }
@@ -89,12 +94,6 @@ cities.push(tokyo);
 cities.push(dubai);
 cities.push(paris);
 cities.push(lima);
-
-//Add city rows
-for (let i = 0; i < cities.length; i++) {
-  cities[i].render();
-  cities[i].staffingRender();
-}
 
 function createTableFooter(tableName) {
   let footerElement = document.createElement('tfoot');
@@ -119,8 +118,8 @@ function createTableFooter(tableName) {
     footerRow.appendChild(footerCell);
   }
 }
-createTableFooter('sales-table');
-createTableFooter('staffing-table');
+
+
 
 // Creating Form - Step 3: Write the callback or event handler
 function handleSubmit(event) {
@@ -130,14 +129,16 @@ function handleSubmit(event) {
   let newStoreMax = event.target.maxCustInput.value;
   let newStoreAvg = event.target.avgCookiesPerCustInput.value;
   //clear the table
-  table.innerHTML = "";
+  let salesTable = document.getElementById('sales-table');
+  let staffingTable = document.getElementById('staffing-table');
+  salesTable.innerHTML = "";
+  staffingTable.innerHTML = "";
 
   //find out if entered location is already in cities array
   let exists = false;
   let cityIndex = 0;
   for (let i = 0; i < cities.length; i++) {
-    if (cities[i].cityName.toLowerCase() === newStoreLocation.toLowerCase())
-    {
+    if (cities[i].cityName.toLowerCase() === newStoreLocation.toLowerCase()) {
       exists = true;
       cityIndex = i;
     }
@@ -146,13 +147,8 @@ function handleSubmit(event) {
   //if city is already in array, remove and re-add it with the new inputs
   if (exists) {
     cities[cityIndex] = new City(newStoreLocation, newStoreMin, newStoreMax, newStoreAvg);
-    createTableHeader();
-    //render data
-    for (let i = 0; i < cities.length; i++) {
-      cities[i].render();
-    }
-    //render footer
-    createTableFooter();
+    renderSalesTable();
+    renderStaffingTable();
   }
   //else append the new city to the end of the list
   else {
@@ -163,33 +159,29 @@ function handleSubmit(event) {
     cities.push(newCity);
     //rerender table
     //render header
-    createTableHeader();
-    //render data
+    renderSalesTable();
+    renderStaffingTable();
+  }
+}
+
+function renderSalesTable() {
+  createTableHeader('sales-table');
+  //Add city rows
+  for (let i = 0; i < cities.length; i++) {
+    cities[i].render();
+  }
+  createTableFooter('sales-table');
+}
+
+function renderStaffingTable() {
+  createTableHeader('staffing-table');
     for (let i = 0; i < cities.length; i++) {
-      cities[i].render();
-    }
-    //render footer
-    createTableFooter();
+    cities[i].staffingRender();
   }
 }
 
-// Create second table for staffing to show how many Salmon Cookie Tossers are needed at each location each hour.
-function secTableHeader() {
-  let secHeaderRow = document.createElement('tr');
-  table.appendChild(secHeaderRow);
-  let secHeaderBlankCell = document.createElement('th');
-  secondHeaderRow.appendChild(secHeaderBlankCell);
-  for (let i = 0; i < storeHours.length; i++) {
-    let secHeaderCell = document.createElement('th');
-    secHeaderCell.classList.add('data-info');
-    secHeaderCell.textContent = storeHours[i];
-    secHeaderRow.appendChild(secHeaderCell);
-  }
-}
-secTableHeader();
-
-
-
+renderSalesTable();
+renderStaffingTable();
 
 // Creating Forms - Step 2 (this goes at the very bottom): Add Event Listener
 newStoreForm.addEventListener('submit', handleSubmit);
