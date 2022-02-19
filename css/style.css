@@ -37,7 +37,7 @@ ul {
 }
 
 .store-header{
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: bold;
   list-style-type: none;
   margin-bottom: 10px;
@@ -56,7 +56,7 @@ p {
 } */
 
 li {
-  font-size: 1em;
+  font-size: 1.1em;
   margin-bottom: 1em;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: black;
@@ -86,7 +86,7 @@ td{
 }
 
 .large-link {
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 
 button {
