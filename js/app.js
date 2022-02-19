@@ -1,13 +1,13 @@
 'use strict'
 
 // Step 1: Window in the DOM
-let table = document.getElementById('sales-table');
 // Creating Forms - Step 1: This grabs the element to listen to for Event Listening
 let newStoreForm = document.getElementById('newStoreForm');
 let storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
-function createTableHeader() {
+function createTableHeader(tableName) {
   let headerRow = document.createElement('tr');
+  let table = document.getElementById(tableName);
   table.appendChild(headerRow);
   let headerBlankCell = document.createElement('th');
   headerRow.appendChild(headerBlankCell);
@@ -18,7 +18,8 @@ function createTableHeader() {
     headerRow.appendChild(headerCell);
   }
 }
-createTableHeader();
+createTableHeader('sales-table');
+createTableHeader('staffing-table');
 
 
 
@@ -49,6 +50,22 @@ function City(cityName, minCustomer, maxCustomer, avgCookiePerCust) {
 
 City.prototype.render = function () {
   let cityRow = document.createElement('tr');
+  let table = document.getElementById('sales-table');
+  table.appendChild(cityRow);
+  let cityTitleCell = document.createElement('td');
+  cityTitleCell.textContent = this.cityName;
+  cityRow.appendChild(cityTitleCell);
+  for (let j = 0; j < storeHours.length; j++) {
+    let cookieDataCell = document.createElement('td');
+    cookieDataCell.classList.add('data-info');
+    cookieDataCell.textContent = this.cookiesSoldPerHr[j];
+    cityRow.appendChild(cookieDataCell);
+  }
+}
+
+City.prototype.staffingRender = function(){
+  let cityRow = document.createElement('tr');
+  let table = document.getElementById('staffing-table');
   table.appendChild(cityRow);
   let cityTitleCell = document.createElement('td');
   cityTitleCell.textContent = this.cityName;
@@ -76,10 +93,12 @@ cities.push(lima);
 //Add city rows
 for (let i = 0; i < cities.length; i++) {
   cities[i].render();
+  cities[i].staffingRender();
 }
 
-function createTableFooter() {
+function createTableFooter(tableName) {
   let footerElement = document.createElement('tfoot');
+  let table = document.getElementById(tableName);
   table.appendChild(footerElement);
   let footerRow = document.createElement('tr');
   let footerTitleCell = document.createElement('td');
@@ -100,7 +119,8 @@ function createTableFooter() {
     footerRow.appendChild(footerCell);
   }
 }
-createTableFooter();
+createTableFooter('sales-table');
+createTableFooter('staffing-table');
 
 // Creating Form - Step 3: Write the callback or event handler
 function handleSubmit(event) {
