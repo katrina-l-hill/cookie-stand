@@ -66,12 +66,14 @@ th{
   padding: 1em;
   font-size: 1.2em;
   font-weight: bold;
+  background-color: #AAAAAA;
 }
 
 td{
   padding: 1em;
   font-size: 1.2em;
-  color:darkblue
+  color:darkblue;
+  background-color: #AAAAAA;
 }
 
 .data-info{
@@ -153,4 +155,8 @@ label {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.input {
+  font-size: 10px;
 }
