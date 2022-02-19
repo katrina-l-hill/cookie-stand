@@ -141,7 +141,12 @@ label {
 #sales-table{
  margin-left: auto;
  margin-right: auto;
+ /* color: lightyellow; */
 }
+
+/* tr {
+  background-color:lightyellow
+} */
 
 .footer
 {
