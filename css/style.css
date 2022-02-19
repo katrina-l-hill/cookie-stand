@@ -64,14 +64,14 @@ li {
 
 th{
   padding: 1em;
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: bold;
   background-color: #AAAAAA;
 }
 
 td{
   padding: 1em;
-  font-size: 1.2em;
+  font-size: 1.4em;
   color:darkblue;
   background-color: #AAAAAA;
 }
@@ -92,7 +92,7 @@ td{
 button {
   margin: .3em .5em;
   padding: .3em .5em;
-  font-size: 01.7em;
+  font-size: 1.8em;
   background-color: aliceblue;
   box-shadow: 0 0 10px black;
   border-radius: 5px;
@@ -107,6 +107,7 @@ button {
   margin-right: auto;
   border: 10px solid salmon;
   width:fit-content;
+  font-size: 1.2em;
 }
 
 input {
