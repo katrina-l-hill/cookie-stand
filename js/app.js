@@ -153,5 +153,23 @@ function handleSubmit(event) {
   }
 }
 
+// Create second table for staffing to show how many Salmon Cookie Tossers are needed at each location each hour.
+function secTableHeader() {
+  let secHeaderRow = document.createElement('tr');
+  table.appendChild(secHeaderRow);
+  let secHeaderBlankCell = document.createElement('th');
+  secondHeaderRow.appendChild(secHeaderBlankCell);
+  for (let i = 0; i < storeHours.length; i++) {
+    let secHeaderCell = document.createElement('th');
+    secHeaderCell.classList.add('data-info');
+    secHeaderCell.textContent = storeHours[i];
+    secHeaderRow.appendChild(secHeaderCell);
+  }
+}
+secTableHeader();
+
+
+
+
 // Creating Forms - Step 2 (this goes at the very bottom): Add Event Listener
 newStoreForm.addEventListener('submit', handleSubmit);
