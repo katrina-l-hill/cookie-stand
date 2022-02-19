@@ -87,6 +87,8 @@ td{
 
 .large-link {
   font-size: 1.5em;
+  margin-top: 40px;
+
 }
 
 button {
@@ -182,3 +184,10 @@ select {
 /* .input {
   font-size: 10px;
 } */
+
+#order-form{
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
